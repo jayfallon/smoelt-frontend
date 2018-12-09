@@ -1,3 +1,3 @@
-# Advanced-React
+# Smoelt - App
 
 frontend
