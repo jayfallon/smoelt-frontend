@@ -20,13 +20,15 @@ const Logo = styled.h1`
 	padding-bottom: 2rem;
 	position: relative;
 	z-index: 2;
-	transform: skew(-7deg);
+	/* transform: skew(-7deg); */
 	a {
 		padding: 0.5rem 1rem;
-		background: ${props => props.theme.red};
-		color: white;
+		/* background: ${props => props.theme.red}; */
+		/* color: white; */
+		color: #131313;
 		text-transform: uppercase;
 		text-decoration: none;
+		cursor: pointer;
 	}
 	@media (max-width: 1280px) {
 		margin: 0;
@@ -64,7 +66,7 @@ const Header = () => (
 			<Nav />
 		</div>
 		<div className="sub-bar">Search</div>
-		<div>Cart</div>
+		{/* <div>Cart</div> */}
 	</StyledHeader>
 );
 

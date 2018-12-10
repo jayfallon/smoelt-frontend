@@ -8,16 +8,16 @@ const Nav = () => (
 		{({ data: { me } }) => (
 			<NavStyles>
 				<Link href="/items">
-					<a>Shop</a>
+					<a>List/Home</a>
 				</Link>
 				{me && (
 					<>
 						<Link href="/sell">
-							<a>Sell</a>
+							<a>Create</a>
 						</Link>
-						<Link href="/orders">
+						{/* <Link href="/orders">
 							<a>Orders</a>
-						</Link>
+						</Link> */}
 						<Link href="/me">
 							<a>Account</a>
 						</Link>
@@ -26,7 +26,7 @@ const Nav = () => (
 				)}
 				{!me && (
 					<Link href="/signup">
-						<a>Signin</a>
+						<a>Sign in</a>
 					</Link>
 				)}
 			</NavStyles>
