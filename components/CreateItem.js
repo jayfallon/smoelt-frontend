@@ -22,11 +22,11 @@ const CREATE_ITEM_MUTATION = gql`
 
 export default class CreateItem extends Component {
 	state = {
-		title: "Cool shoes",
-		description: "I love you",
-		image: "dog.jpg",
-		largeImage: "doggg.jpg",
-		price: 1280,
+		title: "",
+		description: "",
+		image: "",
+		largeImage: "",
+		price: 0,
 	};
 	handleChange = e => {
 		const { name, type, value } = e.target;
@@ -96,7 +96,7 @@ export default class CreateItem extends Component {
 								/>
 							</label>
 							<label htmlFor="price">
-								Price
+								Promo Code
 								<input
 									type="number"
 									id="price"
