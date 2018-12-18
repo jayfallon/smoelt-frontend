@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Router from "next/router";
 import NProgress from "nprogress";
+import Cart from "./Cart";
 import Nav from "./Nav";
 import styled, { injectGlobal } from "styled-components";
 
@@ -66,7 +67,7 @@ const Header = () => (
 			<Nav />
 		</div>
 		<div className="sub-bar">Search</div>
-		{/* <div>Cart</div> */}
+		<Cart />
 	</StyledHeader>
 );
 
