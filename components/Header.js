@@ -3,6 +3,7 @@ import Router from "next/router";
 import NProgress from "nprogress";
 import Cart from "./Cart";
 import Nav from "./Nav";
+import Search from "./Search";
 import styled, { injectGlobal } from "styled-components";
 
 Router.onRouteChangeStart = () => {
@@ -66,7 +67,7 @@ const Header = () => (
 			</Link>
 			<Nav />
 		</div>
-		<div className="sub-bar">Search</div>
+		<Search />
 		<Cart />
 	</StyledHeader>
 );
