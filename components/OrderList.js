@@ -47,7 +47,7 @@ class OrderList extends React.Component {
 									<OrderItemStyles key={order.id}>
 										<Link
 											href={{
-												pathname: "/order/",
+												pathname: "/order",
 												query: { id: order.id },
 											}}
 										>
