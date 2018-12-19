@@ -6,7 +6,6 @@ import styled from "styled-components";
 import gql from "graphql-tag";
 import Error from "./ErrorMessage";
 import formatMoney from "../lib/formatMoney";
-import OderItemStyles from "./styles/OrderItemStyles";
 import OrderItemStyles from "./styles/OrderItemStyles";
 
 const USER_ORDERS_QUERY = gql`
