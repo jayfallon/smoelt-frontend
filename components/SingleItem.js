@@ -48,7 +48,7 @@ export default class SingleItem extends Component {
 					if (error) return <Error error={error} />;
 
 					if (loading) return <p>Loading...</p>;
-					if (!data.item) return <p>No item found for {this.props.id}</p>;
+					if (!data.item) return <p data-test="graphql-error">No item found for {this.props.id}</p>;
 					const item = data.item;
 					return (
 						<SingleItemStyles>
@@ -67,3 +67,5 @@ export default class SingleItem extends Component {
 		);
 	}
 }
+
+export { SINGLE_ITEM_QUERY };
