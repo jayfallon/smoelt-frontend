@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import Meta from "../Meta/Meta";
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
 
@@ -56,6 +57,7 @@ class Page extends Component {
 					<Meta />
 					<Header />
 					<Inner>{this.props.children}</Inner>
+					<Footer />
 				</StyledPage>
 			</ThemeProvider>
 		);
