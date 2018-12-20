@@ -1,0 +1,6 @@
+{
+	"version": 2,
+	"name": "smoelt-frontend",
+	"alias": ["smoelt-frontend"],
+	"builds": [{ "src": "next.config.js", "use": "@now/next" }]
+}

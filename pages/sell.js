@@ -1,6 +1,6 @@
 import Link from "next/link";
-import CreateItem from "../components/CreateItem";
-import PleaseSignIn from "../components/PleaseSignIn";
+import CreateItem from "../components/CreateItem/CreateItem";
+import PleaseSignIn from "../components/PleaseSignIn/PleaseSignIn";
 
 const Sell = props => (
 	<div>
