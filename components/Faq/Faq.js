@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import FaqJumbo from "./FaqJumbo";
 import FaqStyles, { FaqSupport } from "./FaqStyles";
 import DashboardStyles from "../styles/DashboardStyles";
@@ -6,7 +8,7 @@ import DashboardStyles from "../styles/DashboardStyles";
 const Faq = () => (
 	<div>
 		<DashboardStyles />
-
+		<Header />
 		<FaqJumbo />
 		<main>
 			<FaqStyles>
@@ -83,6 +85,7 @@ const Faq = () => (
 				</div>
 			</FaqSupport>
 		</main>
+		<Footer />
 	</div>
 );
 

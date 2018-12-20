@@ -19,7 +19,7 @@ const SIGNIN_MUTATION = gql`
 	}
 `;
 
-class Signin extends Component {
+class Signedout extends Component {
 	state = {
 		name: "",
 		password: "",
@@ -32,7 +32,7 @@ class Signin extends Component {
 		return (
 			<InnerLoginPage>
 				<GlobalLoginStyle />
-				<LoginHeader />
+				<LoginHeader heading={"You've been signed out!"} />
 
 				<Mutation
 					mutation={SIGNIN_MUTATION}
@@ -99,4 +99,4 @@ class Signin extends Component {
 	}
 }
 
-export default Signin;
+export default Signedout;

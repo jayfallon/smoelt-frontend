@@ -24,6 +24,40 @@ const Nav = () => (
 						</li>
 					</ul>
 					<ul className="smoelt_dashboard--menu">
+						{me && (
+							<>
+								<li>
+									<Link href="/sell">
+										<CreateButton type="button">create!</CreateButton>
+									</Link>
+								</li>
+								{/* <li>
+									<Link href="/orders">
+										<a>Orders</a>
+									</Link>
+								</li> */}
+								{/* <li>
+									<Link href="/me">
+										<a>Account</a>
+									</Link>
+								</li> */}
+
+								{/* <Mutation mutation={TOGGLE_CART_MUTATION}>
+									{toggleCart => (
+										<button onClick={toggleCart}>
+											My Cart
+											<CartCount
+												count={me.cart.reduce(
+													(tally, cartItem) => tally + cartItem.quantity,
+													0
+												)}
+											/>
+										</button>
+									)}
+								</Mutation> */}
+							</>
+						)}
+
 						<li>
 							<Link href="/help">
 								<a>help</a>
@@ -39,42 +73,10 @@ const Nav = () => (
 								<a>contact</a>
 							</Link>
 						</li>
-						{me && (
-							<>
-								<li>
-									<Link href="/create">
-										<CreateButton type="button">create!</CreateButton>
-									</Link>
-								</li>
-								<li>
-									<Link href="/orders">
-										<a>Orders</a>
-									</Link>
-								</li>
-								<li>
-									<Link href="/me">
-										<a>Account</a>
-									</Link>
-								</li>
-								<Signout />
-								<Mutation mutation={TOGGLE_CART_MUTATION}>
-									{toggleCart => (
-										<button onClick={toggleCart}>
-											My Cart
-											<CartCount
-												count={me.cart.reduce(
-													(tally, cartItem) => tally + cartItem.quantity,
-													0
-												)}
-											/>
-										</button>
-									)}
-								</Mutation>
-							</>
-						)}
+						{me && <Signout />}
 						{!me && (
 							<li>
-								<Link href="/signup">
+								<Link href="/signin">
 									<a>Sign in</a>
 								</Link>
 							</li>

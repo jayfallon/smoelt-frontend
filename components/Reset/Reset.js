@@ -3,8 +3,12 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "../styles/Form";
 import Error from "../ErrorMessage/ErrorMessage";
+import { InnerLoginPage, LoginForm } from "../styles/InnerLogin";
+import LoginHeader from "../Loginheader/LoginHeader";
+import GlobalLoginStyle from "../styles/Global/GlobalLoginStyle";
+import { SubmitButton } from "../styles/SubmitButton";
 import propTypes from "prop-types";
-import CURRENT_USER_QUERY from "./User";
+import CURRENT_USER_QUERY from "../User/User";
 
 const RESET_MUTATION = gql`
 	mutation RESET_MUTATION($resetToken: String!, $password: String!, $confirmPassword: String!) {
@@ -29,54 +33,59 @@ class Reset extends Component {
 	};
 	render() {
 		return (
-			<Mutation
-				mutation={RESET_MUTATION}
-				variables={{
-					resetToken: this.props.resetToken,
-					password: this.state.password,
-					confirmPassword: this.state.confirmPassword,
-				}}
-				refetchQueries={[{ query: CURRENT_USER_QUERY }]}
-			>
-				{(reset, { error, loading, called }) => (
-					<Form
-						method="post"
-						onSubmit={async e => {
-							e.preventDefault();
-							await reset();
-							this.setState({ password: "", confirmPassword: "" });
-						}}
-					>
-						<fieldset disabled={loading} aria-busy={loading}>
-							<h2>Reset Your Password </h2>
-							<Error error={error} />
+			<InnerLoginPage>
+				<GlobalLoginStyle />
+				<LoginHeader />
 
-							<label htmlFor="password">
-								Password
-								<input
-									type="password"
-									name="password"
-									placeholder="password"
-									value={this.state.password}
-									onChange={this.saveToState}
-								/>
-							</label>
-							<label htmlFor="confirmPassword">
-								Confirm your Password
-								<input
-									type="password"
-									name="confirmPassword"
-									placeholder="confirmPassword"
-									value={this.state.confirmPassword}
-									onChange={this.saveToState}
-								/>
-							</label>
-
-							<button type="submit">Reset your Password</button>
-						</fieldset>
-					</Form>
-				)}
-			</Mutation>
+				<Mutation
+					mutation={RESET_MUTATION}
+					variables={{
+						resetToken: this.props.resetToken,
+						password: this.state.password,
+						confirmPassword: this.state.confirmPassword,
+					}}
+					refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+				>
+					{(reset, { error, loading, called }) => (
+						<LoginForm
+							method="post"
+							onSubmit={async e => {
+								e.preventDefault();
+								await reset();
+								this.setState({ password: "", confirmPassword: "" });
+							}}
+						>
+							<fieldset disabled={loading} aria-busy={loading}>
+								<legend>Reset Your Password </legend>
+								<Error error={error} />
+								<div className="smoelt_form--group">
+									<label htmlFor="password">Password</label>
+									<input
+										type="password"
+										name="password"
+										placeholder="password"
+										value={this.state.password}
+										onChange={this.saveToState}
+									/>
+								</div>
+								<div className="smoelt_form--group">
+									<label htmlFor="confirmPassword">Confirm your Password</label>
+									<input
+										type="password"
+										name="confirmPassword"
+										placeholder="Confirm Password"
+										value={this.state.confirmPassword}
+										onChange={this.saveToState}
+									/>
+								</div>
+								<div className="smoelt_form--group form-submit">
+									<SubmitButton type="submit">Reset your Password</SubmitButton>
+								</div>
+							</fieldset>
+						</LoginForm>
+					)}
+				</Mutation>
+			</InnerLoginPage>
 		);
 	}
 }

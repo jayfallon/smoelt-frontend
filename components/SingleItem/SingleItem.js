@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import Head from "next/head";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
-import Error from "../ErrorMessage/ErrorMessage";
 import styled from "styled-components";
-import Head from "next/head";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Error from "../ErrorMessage/ErrorMessage";
 
 const SingleItemStyles = styled.div`
+	background-color: #fff;
 	max-width: 1200px;
 	margin: 2rem auto;
 	box-shadow: ${props => props.theme.bs};
@@ -51,16 +54,20 @@ export default class SingleItem extends Component {
 					if (!data.item) return <p data-test="graphql-error">No item found for {this.props.id}</p>;
 					const item = data.item;
 					return (
-						<SingleItemStyles>
+						<>
+							<Header />
 							<Head>
 								<title>Smoelt | {item.title}</title>
 							</Head>
-							<img src={item.largeImage} alt={item.title} />
-							<div className="details">
-								<h2>Viewing {item.title}</h2>
-								<p>{item.description}</p>
-							</div>
-						</SingleItemStyles>
+							<SingleItemStyles>
+								<img src={item.largeImage} alt={item.title} />
+								<div className="details">
+									<h2>Viewing {item.title}</h2>
+									<p>{item.description}</p>
+								</div>
+							</SingleItemStyles>
+							<Footer />
+						</>
 					);
 				}}
 			</Query>
