@@ -11,19 +11,39 @@ const SingleItemStyles = styled.div`
 	background-color: #fff;
 	max-width: 1200px;
 	margin: 2rem auto;
-	box-shadow: ${props => props.theme.bs};
 	display: grid;
-	grid-auto-columns: 1fr;
-	grid-auto-flow: column;
+	grid-template-columns: 10rem auto 10rem;
+	grid-template-rows: 10rem auto 10rem;
 	min-height: 800px;
+	@media (max-width: 50rem) {
+		grid-template-columns: 1rem auto 1rem;
+		grid-template-rows: 1rem auto 1rem;
+	}
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		grid-area: 1/1/4/4;
 	}
 	.details {
-		margin: 3rem;
-		font-size: 2rem;
+		background-color: hsla(0, 0%, 0%, 0.5);
+		padding: 5rem;
+		color: ${props => props.theme.smoeltWhite};
+		grid-area: 2/2/3/3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h2 {
+			margin-bottom: 3rem;
+			font-family: GothamBold, sans-serif;
+			font-size: 5.6rem;
+			text-align: center;
+		}
+		p {
+			font-size: 2.4rem;
+			text-align: center;
+		}
 	}
 `;
 
@@ -62,7 +82,7 @@ export default class SingleItem extends Component {
 							<SingleItemStyles>
 								<img src={item.largeImage} alt={item.title} />
 								<div className="details">
-									<h2>Viewing {item.title}</h2>
+									<h2>{item.title}</h2>
 									<p>{item.description}</p>
 								</div>
 							</SingleItemStyles>

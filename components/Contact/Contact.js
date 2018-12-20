@@ -48,15 +48,15 @@ const Contact = () => (
 				<LoginForm action="">
 					<fieldset>
 						<legend>Contact Us</legend>
-						<div className="sapphire_form--group">
+						<div className="smoelt_form--group">
 							<label htmlFor="email_address">Optional Title</label>{" "}
 							<input type="email" id="email_address" />
 						</div>
-						<div className="sapphire_form--group">
+						<div className="smoelt_form--group">
 							<label htmlFor="password">Message</label> <textarea rows="12" />
 						</div>
 
-						<div className="sapphire_form--group form-submit">
+						<div className="smoelt_form--group form-submit">
 							<Link href="/contact-received">
 								<SubmitButton>contact us</SubmitButton>
 							</Link>

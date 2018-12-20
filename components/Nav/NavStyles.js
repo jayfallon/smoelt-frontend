@@ -23,6 +23,10 @@ const NavStyles = styled.div`
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: 50rem) {
+			height: 13rem;
+			flex-direction: column;
+		}
 	}
 
 	nav.smoelt_dashboard--nav ul {
@@ -48,6 +52,9 @@ const NavStyles = styled.div`
 
 	ul.smoelt_dashboard--menu li {
 		margin: 0 0 0 3rem;
+		@media (max-width: 50rem) {
+			margin: 0 1rem 2rem;
+		}
 	}
 
 	ul.smoelt_dashboard--menu a {

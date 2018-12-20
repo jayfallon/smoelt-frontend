@@ -27,7 +27,7 @@ const Nav = () => (
 						{me && (
 							<>
 								<li>
-									<Link href="/sell">
+									<Link href="/create">
 										<CreateButton type="button">create!</CreateButton>
 									</Link>
 								</li>
@@ -58,11 +58,11 @@ const Nav = () => (
 							</>
 						)}
 
-						<li>
+						{/* <li>
 							<Link href="/help">
 								<a>help</a>
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link href="/faq">
 								<a>faq</a>

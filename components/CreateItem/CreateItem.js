@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Router from "next/router";
-import Form from "../styles/Form";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import { LoginForm } from "../styles/InnerLogin";
+import { PreviewButton } from "../styles/SubmitButton";
 import Error from "../ErrorMessage/ErrorMessage";
+import CreateItemStyles, { CreateItemWrapper } from "./CreateItemStyles";
 
 const CREATE_ITEM_MUTATION = gql`
 	mutation CREATE_ITEM_MUTATION(
@@ -50,77 +54,96 @@ export default class CreateItem extends Component {
 	};
 	render() {
 		return (
-			<Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
-				{(createItem, { loading, error }) => (
-					<Form
-						data-test="form"
-						onSubmit={async e => {
-							// stop form
-							e.preventDefault();
-							// call mutation
-							const res = await createItem();
-							// change them to single item
-							console.log(res);
-							Router.push({
-								pathname: "/item",
-								query: { id: res.data.createItem.id },
-							});
-						}}
-					>
-						<Error error={error} />
-						<fieldset disabled={loading} aria-busy={loading}>
-							<label htmlFor="file">
-								Image
-								<input
-									type="file"
-									id="file"
-									name="file"
-									placeholder="Upload and image"
-									required
-									onChange={this.uploadFile}
-								/>
-								{this.state.image && <img src={this.state.image} alt="Upload Preview" />}
-							</label>
-							<label htmlFor="title">
-								Title
-								<input
-									type="text"
-									id="title"
-									name="title"
-									placeholder="Title"
-									required
-									value={this.state.title}
-									onChange={this.handleChange}
-								/>
-							</label>
-							<label htmlFor="price">
-								Promo Code
-								<input
-									type="number"
-									id="price"
-									name="price"
-									placeholder="Price"
-									required
-									value={this.state.price}
-									onChange={this.handleChange}
-								/>
-							</label>
-							<label htmlFor="description">
-								Description
-								<textarea
-									id="description"
-									name="description"
-									placeholder="Enter a description"
-									required
-									value={this.state.description}
-									onChange={this.handleChange}
-								/>
-							</label>
-							<button type="submit">Submit</button>
-						</fieldset>
-					</Form>
-				)}
-			</Mutation>
+			<>
+				<Header />
+				<CreateItemWrapper>
+					<main>
+						<CreateItemStyles>
+							<div className="createInner">
+								<h3>Create a Landing Page</h3>
+								<Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
+									{(createItem, { loading, error }) => (
+										<LoginForm
+											data-test="form"
+											onSubmit={async e => {
+												// stop form
+												e.preventDefault();
+												// call mutation
+												const res = await createItem();
+												// change them to single item
+												console.log(res);
+												Router.push({
+													pathname: "/item",
+													query: { id: res.data.createItem.id },
+												});
+											}}
+										>
+											<Error error={error} />
+											<fieldset disabled={loading} aria-busy={loading}>
+												<div className="smoelt_form--group" />
+												<div className="smoelt_form--group">
+													<label htmlFor="file">Image</label>
+													<input
+														type="file"
+														id="file"
+														name="file"
+														placeholder="Upload and image"
+														required
+														onChange={this.uploadFile}
+													/>
+													{this.state.image && (
+														<img src={this.state.image} alt="Upload Preview" />
+													)}
+												</div>
+												<div className="smoelt_form--group">
+													<label htmlFor="title">Title</label>
+													<input
+														type="text"
+														id="title"
+														name="title"
+														placeholder="Title"
+														required
+														value={this.state.title}
+														onChange={this.handleChange}
+													/>
+												</div>
+												<div className="smoelt_form--group">
+													<label htmlFor="price">Promo Code</label>
+													<input
+														type="text"
+														id="price"
+														name="price"
+														placeholder="Price"
+														required
+														value={this.state.price}
+														onChange={this.handleChange}
+													/>
+												</div>
+												<div className="smoelt_form--group">
+													<label htmlFor="description">Description</label>
+													<textarea
+														id="description"
+														name="description"
+														placeholder="Enter a description"
+														required
+														value={this.state.description}
+														onChange={this.handleChange}
+													/>
+												</div>
+
+												<div className="smoelt_form--group form-submit">
+													<PreviewButton type="submit">Create!</PreviewButton>
+												</div>
+											</fieldset>
+										</LoginForm>
+									)}
+								</Mutation>
+							</div>
+						</CreateItemStyles>
+					</main>
+				</CreateItemWrapper>
+				<Footer />
+			</>
 		);
 	}
 }

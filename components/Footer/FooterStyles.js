@@ -28,6 +28,9 @@ const FooterStyles = styled.footer`
 	.smoelt_footer--info-nav ul {
 		display: flex;
 		justify-content: center;
+		@media (max-width: 50rem) {
+			display: inline;
+		}
 	}
 
 	.smoelt_footer--info-nav ul li {
@@ -36,18 +39,27 @@ const FooterStyles = styled.footer`
 		text-transform: capitalize;
 		list-style: none;
 		position: relative;
+		@media (max-width: 50rem) {
+			padding: 1.5rem 0;
+		}
 	}
 
 	.smoelt_footer--info-nav ul li:nth-child(2):before {
 		content: "|";
 		position: absolute;
 		left: 0;
+		@media (max-width: 50rem) {
+			content: "";
+		}
 	}
 
 	.smoelt_footer--info-nav ul li:nth-child(2):after {
 		content: "|";
 		position: absolute;
 		right: 0;
+		@media (max-width: 50rem) {
+			content: "";
+		}
 	}
 
 	.smoelt_footer--content {
