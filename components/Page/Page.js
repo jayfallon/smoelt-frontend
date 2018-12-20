@@ -42,7 +42,7 @@ const MyPageStyle = createGlobalStyle`
 `;
 
 const StyledPage = styled.div`
-	background: pink;
+	/* background: pink; */
 	color: ${props => props.theme.black};
 `;
 
