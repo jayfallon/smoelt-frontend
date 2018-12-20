@@ -1,6 +1,6 @@
 import Link from "next/link";
-import PleaseSignIn from "../components/PleaseSignIn";
-import Order from "../components/Order";
+import PleaseSignIn from "../components/PleaseSignIn/PleaseSignIn";
+import Order from "../components/Order/Order";
 
 const OrderPage = props => (
 	<div>
