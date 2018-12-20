@@ -4,7 +4,7 @@ import NProgress from "nprogress";
 import Cart from "../Cart/Cart";
 import Nav from "../Nav/Nav";
 import Search from "../Search/Search";
-import styled, { injectGlobal } from "styled-components";
+import styled from "styled-components";
 
 Router.onRouteChangeStart = () => {
 	NProgress.start();
