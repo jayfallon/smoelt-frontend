@@ -59,14 +59,7 @@ const StyledHeader = styled.header`
 
 const Header = () => (
 	<StyledHeader>
-		<div className="bar">
-			<Link href="/">
-				<Logo>
-					<a>Smoelt &amp; Co.</a>
-				</Logo>
-			</Link>
-			<Nav />
-		</div>
+		<Nav />
 		<Search />
 		<Cart />
 	</StyledHeader>
