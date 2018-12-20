@@ -30,32 +30,34 @@ const Pagination = props => (
 							Smoelt &amp; Co. | Page {page} of {pages}
 						</title>
 					</Head>
-					<Link
-						prefetch
-						href={{
-							pathname: "items",
-							query: { page: page - 1 },
-						}}
-					>
-						<a className="prev" aria-disabled={page <= 1}>
-							⃖ Prev
-						</a>
-					</Link>
-					<p>
-						Page {props.page} of <span className="totalPages">{pages}</span> pages
-					</p>
-					<p>{count} Items Total</p>
-					<Link
-						prefetch
-						href={{
-							pathname: "items",
-							query: { page: page + 1 },
-						}}
-					>
-						<a className="next" aria-disabled={page >= pages}>
-							Next ⃗
-						</a>
-					</Link>
+					<div className="pagination_component">
+						<Link
+							prefetch
+							href={{
+								pathname: "items",
+								query: { page: page - 1 },
+							}}
+						>
+							<a className="prev" aria-disabled={page <= 1}>
+								⬅ Prev
+							</a>
+						</Link>
+						<p>
+							Page {props.page} of <span className="totalPages">{pages}</span> pages
+						</p>
+						<p>{count} Items Total</p>
+						<Link
+							prefetch
+							href={{
+								pathname: "items",
+								query: { page: page + 1 },
+							}}
+						>
+							<a className="next" aria-disabled={page >= pages}>
+								Next ➡
+							</a>
+						</Link>
+					</div>
 				</PaginationStyles>
 			);
 		}}

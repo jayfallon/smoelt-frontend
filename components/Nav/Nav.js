@@ -27,7 +27,7 @@ const Nav = () => (
 						{me && (
 							<>
 								<li>
-									<Link href="/sell">
+									<Link href="/create">
 										<CreateButton type="button">create!</CreateButton>
 									</Link>
 								</li>
