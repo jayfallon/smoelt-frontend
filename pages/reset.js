@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Reset from "../components/Reset/Reset";
 
 const Sell = props => (

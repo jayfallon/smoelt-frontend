@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Items from "../components/Items/Items";
 
 const Home = props => (
