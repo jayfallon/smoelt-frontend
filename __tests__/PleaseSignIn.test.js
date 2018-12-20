@@ -43,7 +43,7 @@ describe("<PleaseSignIn/>", () => {
 		);
 		await wait();
 		wrapper.update();
-		console.log(wrapper.debug());
+		// console.log(wrapper.debug());
 		expect(wrapper.find("Hey").exists()).toBe(true);
 		// expect(wrapper.contains(<Hey />)).toBe(true);
 	});
