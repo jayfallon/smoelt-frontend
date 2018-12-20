@@ -4,7 +4,7 @@ import { Query } from "react-apollo";
 import Head from "next/head";
 import Link from "next/link";
 import { perPage } from "../../config";
-import PaginationStyles from "../styles/PaginationStyles";
+import PaginationStyles from "./PaginationStyles";
 
 const PAGINATION_QUERY = gql`
 	query PAGINATION_QUERY {

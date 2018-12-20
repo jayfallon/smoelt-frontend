@@ -58,11 +58,11 @@ const Nav = () => (
 							</>
 						)}
 
-						<li>
+						{/* <li>
 							<Link href="/help">
 								<a>help</a>
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link href="/faq">
 								<a>faq</a>
