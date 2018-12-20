@@ -1,19 +1,23 @@
 import React, { Component } from "react";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import Meta from "../Meta/Meta";
-import styled, { ThemeProvider, injectGlobal } from "styled-components";
+import GlobalPageStyles from "../styles/Global/GlobalPageStyles";
 
 const theme = {
-	red: "#F88379",
-	black: "#393939",
-	grey: "#3A3A3A",
-	lightgrey: "#E1E1E1",
-	offWhite: "#EDEDED",
-	maxWidth: "1280px",
-	bs: "0 2px 8px 0 rgba(0, 0, 0, 0.25)",
+	smoeltBlack: "hsla(0, 0%, 7%, 1)",
+	smoeltWhite: "hsla(0, 100%, 100%, 1)",
+	livingCoral: "hsla(4, 94%, 69%, 1)",
+	gray: "hsla(0, 0%, 23%, 1)",
+	lightGray: "#hsla(0, 0%, 88%, 1)",
+	maxWidth: "130rem",
+	padding: "0 10px",
+	margin: "0 auto",
+	boxShadow: "0 2px 8px 0 hsla(0, 0%, 0%, 0.25)",
 };
 
-injectGlobal`
+const MyPageStyle = createGlobalStyle`
 	@import url("https://use.typekit.net/spc0stv.css");
 	html {
 		font-family: trade-gothic-next, sans-serif;
@@ -26,6 +30,7 @@ injectGlobal`
 		box-sizing: inherit;
 	}
 	body {
+		background-color: ${props => props.theme.smoeltBlack};
 		margin: 0;
 		padding: 0;
 		font-size: 1.5rem;
@@ -37,7 +42,7 @@ injectGlobal`
 `;
 
 const StyledPage = styled.div`
-	background: #fff;
+	background: pink;
 	color: ${props => props.theme.black};
 `;
 
@@ -53,9 +58,12 @@ class Page extends Component {
 		return (
 			<ThemeProvider theme={theme}>
 				<StyledPage>
+					<GlobalPageStyles />
+					<MyPageStyle />
 					<Meta />
 					<Header />
 					<Inner>{this.props.children}</Inner>
+					<Footer />
 				</StyledPage>
 			</ThemeProvider>
 		);
