@@ -5,7 +5,6 @@ import User from "../User/User";
 import Signout from "../Signout/Signout";
 import { TOGGLE_CART_MUTATION } from "../Cart/Cart";
 import CartCount from "../CartCount/CartCount";
-import CartItem from "../CartItem/CartItem";
 
 const Nav = () => (
 	<User>
