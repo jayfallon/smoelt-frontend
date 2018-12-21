@@ -2,13 +2,19 @@ import React, { Component } from "react";
 import Head from "next/head";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Error from "../ErrorMessage/ErrorMessage";
 
+const GlobalItemsStyle = createGlobalStyle`
+    body {
+        background-color: ${props => props.theme.smoeltBlack};
+    }
+`;
+
 const SingleItemStyles = styled.div`
-	background-color: #fff;
+	background-color: #f8f8f8;
 	max-width: 1200px;
 	margin: 2rem auto;
 	display: grid;
@@ -38,7 +44,7 @@ const SingleItemStyles = styled.div`
 			margin-bottom: 3rem;
 			font-family: GothamBold, sans-serif;
 			font-size: 5.6rem;
-			text-align: center;
+			/* text-align: center; */
 		}
 		p {
 			font-size: 2.4rem;
@@ -75,6 +81,7 @@ export default class SingleItem extends Component {
 					const item = data.item;
 					return (
 						<>
+							<GlobalItemsStyle />
 							<Header />
 							<Head>
 								<title>Smoelt | {item.title}</title>

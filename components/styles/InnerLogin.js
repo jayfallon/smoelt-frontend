@@ -44,7 +44,7 @@ const LoginForm = styled.form`
 	.smoelt_form--group textarea {
 		background-color: #f8f8f8;
 		padding: 1.2rem 1.4rem;
-		border: 0.1rem solid #f8f8f8;
+		border: 0.1rem solid #e6e6e6;
 		font-size: 1.6rem;
 	}
 

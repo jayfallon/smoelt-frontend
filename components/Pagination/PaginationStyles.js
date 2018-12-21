@@ -28,9 +28,10 @@ const PaginationStyles = styled.div`
 		}
 		a {
 			color: ${props => props.theme.smoeltBlack};
+			text-decoration: none;
 		}
 		a[aria-disabled="true"] {
-			color: grey;
+			color: gray;
 			pointer-events: none;
 		}
 	}

@@ -6,7 +6,6 @@ const ItemsStyles = styled.section`
 `;
 
 const ItemsInnerStyles = styled.div`
-	background-color: #fff;
 	margin: ${props => props.theme.margin};
 	padding: 5.3rem 1rem 1rem;
 	max-width: ${props => props.theme.maxWidth};
