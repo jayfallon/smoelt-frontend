@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
+import { InnerLoginPage, LoginForm } from "../styles/InnerLogin";
+import LoginHeader from "../Loginheader/LoginHeader";
+import GlobalLoginStyle from "../styles/Global/GlobalLoginStyle";
+import { SubmitButton } from "../styles/SubmitButton";
 import Form from "../styles/Form";
 import Error from "../ErrorMessage/ErrorMessage";
 
@@ -21,37 +25,43 @@ class RequestReset extends Component {
 	};
 	render() {
 		return (
-			<Mutation mutation={REQUEST_RESET_MUTATION} variables={this.state}>
-				{(reset, { error, loading, called }) => (
-					<Form
-						method="post"
-						data-test="form"
-						onSubmit={async e => {
-							e.preventDefault();
-							await reset();
-							this.setState({ email: "" });
-						}}
-					>
-						<fieldset disabled={loading} aria-busy={loading}>
-							<h2>Request Password Reset</h2>
-							<Error error={error} />
-							{!error && !loading && called && <p>Check your email for a reset link</p>}
-							<label htmlFor="email">
-								Email
-								<input
-									type="email"
-									name="email"
-									placeholder="email"
-									value={this.state.email}
-									onChange={this.saveToState}
-								/>
-							</label>
+			<InnerLoginPage>
+				<GlobalLoginStyle />
+				<LoginHeader />
+				<Mutation mutation={REQUEST_RESET_MUTATION} variables={this.state}>
+					{(reset, { error, loading, called }) => (
+						<LoginForm
+							method="post"
+							data-test="form"
+							onSubmit={async e => {
+								e.preventDefault();
+								await reset();
+								this.setState({ email: "" });
+							}}
+						>
+							<fieldset disabled={loading} aria-busy={loading}>
+								<h2>Request Password Reset</h2>
+								<Error error={error} />
+								{!error && !loading && called && <h4>Check your email for a reset link</h4>}
+								<div className="smoelt_form--group">
+									<label htmlFor="email">Email</label>
+									<input
+										type="email"
+										name="email"
+										placeholder="email"
+										value={this.state.email}
+										onChange={this.saveToState}
+									/>
+								</div>
 
-							<button type="submit">Request Reset</button>
-						</fieldset>
-					</Form>
-				)}
-			</Mutation>
+								<div className="smoelt_form--group form-submit">
+									<SubmitButton type="submit">Request Reset</SubmitButton>
+								</div>
+							</fieldset>
+						</LoginForm>
+					)}
+				</Mutation>
+			</InnerLoginPage>
 		);
 	}
 }

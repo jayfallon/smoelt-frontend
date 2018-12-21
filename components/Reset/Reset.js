@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import Form from "../styles/Form";
 import Error from "../ErrorMessage/ErrorMessage";
 import { InnerLoginPage, LoginForm } from "../styles/InnerLogin";
 import LoginHeader from "../Loginheader/LoginHeader";
@@ -59,11 +58,11 @@ class Reset extends Component {
 								<legend>Reset Your Password </legend>
 								<Error error={error} />
 								<div className="smoelt_form--group">
-									<label htmlFor="password">Password</label>
+									<label htmlFor="Password">Password</label>
 									<input
 										type="password"
 										name="password"
-										placeholder="password"
+										placeholder="Password"
 										value={this.state.password}
 										onChange={this.saveToState}
 									/>

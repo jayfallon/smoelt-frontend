@@ -85,6 +85,17 @@ const LoginForm = styled.form`
 		font-family: GothamBold, sans-serif;
 		font-size: 1.6rem;
 	}
+
+	h2 {
+		padding: 2rem 0;
+		font-size: 2.4rem;
+		text-align: center;
+	}
+	h4 {
+		padding: 2rem 0;
+		font-size: 2rem;
+		text-align: center;
+	}
 `;
 
 export { InnerLoginPage, LoginForm };

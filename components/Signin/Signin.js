@@ -75,7 +75,7 @@ class Signin extends Component {
 											/>
 										</div>
 										<div className="smoelt_form--group password-forgot">
-											<Link href="/reset">
+											<Link href="/request">
 												<a>Forgot your password?</a>
 											</Link>
 										</div>
