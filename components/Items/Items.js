@@ -49,7 +49,7 @@ export default class Items extends Component {
 				<main>
 					<ItemsStyles>
 						<ItemsInnerStyles>
-							<Pagination page={this.props.page} />
+							{/* <Pagination page={this.props.page} />	 */}
 							<Query
 								query={ALL_ITEMS_QUERY}
 								// fetchPolicy="network-only"

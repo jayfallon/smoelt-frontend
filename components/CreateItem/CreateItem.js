@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
+import { createGlobalStyle } from "styled-components";
 import Router from "next/router";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -8,6 +9,12 @@ import { LoginForm } from "../styles/InnerLogin";
 import { PreviewButton } from "../styles/SubmitButton";
 import Error from "../ErrorMessage/ErrorMessage";
 import CreateItemStyles, { CreateItemWrapper } from "./CreateItemStyles";
+
+const GlobalItemsStyle = createGlobalStyle`
+    body {
+        background-color: ${props => props.theme.smoeltBlack};
+    }
+`;
 
 const CREATE_ITEM_MUTATION = gql`
 	mutation CREATE_ITEM_MUTATION(
@@ -55,6 +62,7 @@ export default class CreateItem extends Component {
 	render() {
 		return (
 			<>
+				<GlobalItemsStyle />
 				<Header />
 				<CreateItemWrapper>
 					<main>
