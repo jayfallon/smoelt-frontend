@@ -49,7 +49,7 @@ const ContactHeading = styled.header`
 const ContactHeader = props => (
 	<ContactHeading>
 		<h1>
-			<a href="/dashboard">
+			<a href="/">
 				<span>Smoelt &amp; Co.</span>
 			</a>
 		</h1>
