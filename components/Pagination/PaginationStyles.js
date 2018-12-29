@@ -10,7 +10,7 @@ const PaginationStyles = styled.div`
 		margin: 2rem 0;
 		border: 0.2rem solid ${props => props.theme.smoeltBlack};
 		border-radius: 10px;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.6rem;
 		text-align: center;
 		display: grid;

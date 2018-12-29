@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Item = styled.div`
-	background-color: #fff;
+	background-color: ${props => props.theme.smoeltWhite};
 	height: 41.6rem;
-	color: #242424;
-	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+	color: ${props => props.theme.darkGray};
+	box-shadow: ${props => props.theme.boxShadow};
 	box-shadow: ${props => props.theme.bs};
 	position: relative;
 	display: grid;
@@ -13,7 +13,7 @@ const Item = styled.div`
 
 	img {
 		max-width: 100%;
-		max-height: 100%;
+		max-height: auto;
 		grid-area: 1/1/4/4;
 	}
 	.buttonList {

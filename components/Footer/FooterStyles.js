@@ -4,7 +4,7 @@ const FooterStyles = styled.footer`
 	margin: 0 auto;
 	padding: 4.5rem 1rem 10rem;
 	max-width: 84.4rem;
-	color: #ffffff;
+	color: ${props => props.theme.smoeltWhite};
 	font-size: 1.3rem;
 	line-height: 1.54;
 	text-align: center;
@@ -13,7 +13,7 @@ const FooterStyles = styled.footer`
 	justify-content: center;
 
 	a {
-		color: #ffffff;
+		color: ${props => props.theme.smoeltWhite};
 		text-decoration: none;
 	}
 
@@ -83,7 +83,7 @@ const FooterStyles = styled.footer`
 		padding: 0 1.5rem;
 		width: 3.6rem;
 		height: 3.6rem;
-		color: hsla(0, 0%, 44%, 1);
+		color: ${props => props.theme.medGray};
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -101,7 +101,7 @@ const FooterStyles = styled.footer`
 
 	nav.smoelt_footer--social-nav li a {
 		background-repeat: no-repeat;
-		color: hsla(0, 0%, 44%, 1);
+		color: ${props => props.theme.medGray};
 	}
 
 	nav.smoelt_footer--social-nav li.item-facebook a {

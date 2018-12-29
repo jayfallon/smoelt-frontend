@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FaqStyles = styled.section`
-	background-color: #f8f8f8;
+	background-color: ${props => props.theme.offWhite};
 	padding: 8rem 0 8rem;
 
 	.faq_questions--inner {
@@ -27,7 +27,7 @@ const FaqStyles = styled.section`
 		background-position: center right 2rem;
 		background-size: 1.8rem;
 		margin-bottom: 3.2rem;
-		background-color: #ffffff;
+		background-color: ${props => props.theme.smoeltWhite};
 		padding: 1.5rem 7rem 1.5rem 2.5rem;
 		color: #181818;
 		font-family: GothamBold;
@@ -49,7 +49,7 @@ const FaqStyles = styled.section`
 		background-repeat: no-repeat;
 		background-size: 1.5rem 1.5rem;
 		background-position: right 2rem center;
-		background-color: #ffffff;
+		background-color: ${props => props.theme.smoeltWhite};
 		padding: 1.5rem 7rem 1.5rem 2.5rem;
 		color: #181818;
 		font-family: GothamBold;
@@ -64,7 +64,7 @@ const FaqStyles = styled.section`
 	}
 
 	.faq_question label:hover {
-		background-color: #ffffff;
+		background-color: ${props => props.theme.smoeltWhite};
 		box-shadow: 0 0.4rem 0.6rem 0.4rem rgba(0, 0, 0, 0.15);
 	}
 
@@ -85,7 +85,7 @@ const FaqStyles = styled.section`
 	}
 
 	.faq_question article {
-		background: #ffffff;
+		background: ${props => props.theme.smoeltWhite}fff;
 		margin: -1px 0 0;
 		overflow: hidden;
 		height: 0px;
@@ -134,9 +134,9 @@ const FaqStyles = styled.section`
 `;
 
 const FaqSupport = styled.section`
-	background-color: #ffffff;
+	background-color: ${props => props.theme.smoeltWhite};
 	padding: 9.2rem 0 16.9rem;
-	color: #242424;
+	color: ${props => props.theme.darkGray};
 	.support-inner {
 		margin: ${props => props.theme.margin};
 		padding: ${props => props.theme.padding};
@@ -144,7 +144,7 @@ const FaqSupport = styled.section`
 	}
 	h4 {
 		padding-bottom: 1.4rem;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 2.8rem;
 		line-height: 1.71;
 		letter-spacing: 2.5px;
@@ -160,7 +160,7 @@ const FaqSupport = styled.section`
 		text-align: center;
 	}
 	a {
-		color: #242424;
+		color: ${props => props.theme.darkGray};
 	}
 `;
 

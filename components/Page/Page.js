@@ -3,11 +3,18 @@ import { ThemeProvider } from "styled-components";
 import Meta from "../Meta/Meta";
 
 const theme = {
+	smoeltLogo: "${props => props.theme.smoeltLogo}",
+	smoeltLogoDash: "url(/static/images/smoelt-logo-dash.png)",
 	smoeltBlack: "hsla(0, 0%, 7%, 1)",
-	smoeltWhite: "hsla(0, 100%, 100%, 1)",
-	livingCoral: "hsla(4, 94%, 69%, 1)",
+	darkGray: "hsla(0, 0%, 14%, 1)",
 	gray: "hsla(0, 0%, 23%, 1)",
+	medGray: "${props => props.theme.medGray}",
 	lightGray: "#hsla(0, 0%, 88%, 1)",
+	smoeltWhite: "hsla(0, 100%, 100%, 1)",
+	offWhite: "hsla(0, 0%, 97%, 1)",
+	livingCoral: "hsla(4, 94%, 69%, 1)",
+	fontNormal: "GothamBook, sans-serif",
+	fontBold: "${props => props.theme.fontBold}",
 	maxWidth: "130rem",
 	padding: "0 10px",
 	margin: "0 auto",

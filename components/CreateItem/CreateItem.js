@@ -9,12 +9,7 @@ import { LoginForm } from "../styles/InnerLogin";
 import { PreviewButton } from "../styles/SubmitButton";
 import Error from "../ErrorMessage/ErrorMessage";
 import CreateItemStyles, { CreateItemWrapper } from "./CreateItemStyles";
-
-const GlobalItemsStyle = createGlobalStyle`
-    body {
-        background-color: ${props => props.theme.smoeltBlack};
-    }
-`;
+import GlobalPageStyles from "../styles/Global/GlobalPageStyle";
 
 const CREATE_ITEM_MUTATION = gql`
 	mutation CREATE_ITEM_MUTATION(
@@ -62,7 +57,7 @@ export default class CreateItem extends Component {
 	render() {
 		return (
 			<>
-				<GlobalItemsStyle />
+				<GlobalPageStyles />
 				<Header />
 				<CreateItemWrapper>
 					<main>

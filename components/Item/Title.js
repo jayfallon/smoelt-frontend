@@ -11,7 +11,7 @@ const Title = styled.h3`
 	align-items: center;
 	a {
 		display: inline;
-		color: #fff;
+		color: ${props => props.theme.smoeltWhite};
 		font-family: GothamBold;
 		line-height: 1.3;
 		font-size: 4rem;

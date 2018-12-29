@@ -4,7 +4,7 @@ const DasboardJumboStyles = styled.article`
 	background-image: url(/static/images/simon-launay-1063331-unsplash.png);
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-color: #242424;
+	background-color: ${props => props.theme.darkGray};
 	padding: 12rem 0 5.6rem;
 	@media (max-width: 50rem) {
 		padding: 3rem 0;
@@ -17,8 +17,8 @@ const DasboardJumboStyles = styled.article`
 	}
 
 	h2 {
-		color: #f8f8f8;
-		font-family: GothamBold, sans-serif;
+		color: ${props => props.theme.offWhite};
+		font-family: ${props => props.theme.fontBold};
 		font-size: 3.4rem;
 		line-height: 1.06;
 		text-align: center;

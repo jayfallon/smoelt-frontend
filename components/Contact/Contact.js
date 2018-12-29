@@ -16,24 +16,24 @@ const GlobalContactStyle = createGlobalStyle`
 `;
 
 const SubmitButton = styled.button`
-	background-color: #f8f8f8;
+	background-color: ${props => props.theme.offWhite};
 	padding: 1.75rem 2.65rem;
 	min-width: 19rem;
 	border: 0;
 	border-radius: 2.5rem;
-	color: #242424;
-	font-family: GothamBold, sans-serif;
+	color: ${props => props.theme.darkGray};
+	font-family: ${props => props.theme.fontBold};
 	font-size: 1.2rem;
 	letter-spacing: 0.15rem;
 	text-transform: uppercase;
 	cursor: pointer;
 	&:hover {
-		background-color: #242424;
-		color: #f8f8f8;
+		background-color: ${props => props.theme.darkGray};
+		color: ${props => props.theme.offWhite};
 	}
 	&:active {
 		background-color: ${props => props.theme.boseBlack};
-		color: #f8f8f8;
+		color: ${props => props.theme.offWhite};
 	}
 `;
 

@@ -4,7 +4,7 @@ const FaqJumboStyles = styled.div`
 	background-image: url(/static/images/rawpixel-666934-unsplash.png);
 	background-repeat: no-repeat;
 	background-position: center left;
-	background-color: #242424;
+	background-color: ${props => props.theme.darkGray};
 	padding: 14.3rem 0;
 	.jumboInner {
 		margin: 0 auto 0;
@@ -14,10 +14,10 @@ const FaqJumboStyles = styled.div`
 			font-family: GothamBold;
 			font-size: 8rem;
 			text-align: center;
-			color: #242424;
+			color: ${props => props.theme.darkGray};
 		}
 		p {
-			color: #242424;
+			color: ${props => props.theme.darkGray};
 			font-size: 1.8rem;
 			line-height: 2;
 			text-align: center;
