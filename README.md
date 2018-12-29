@@ -55,3 +55,7 @@ If everything went smoothly, 🙏, the terminal should respond with:
 `> Ready on http://localhost:7777`
 
 You can now access the frontend at [http://localhost:7777](http://localhost:7777).
+
+### Turn the server off
+
+To turn the server off, you just need to type `ctrl-c` in the terminal window where the server is running.
