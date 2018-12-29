@@ -9,6 +9,7 @@ import Error from "../ErrorMessage/ErrorMessage";
 
 const GlobalItemsStyle = createGlobalStyle`
     body {
+		background-image: url();
         background-color: ${props => props.theme.smoeltBlack};
     }
 `;
@@ -81,7 +82,6 @@ export default class SingleItem extends Component {
 					const item = data.item;
 					return (
 						<>
-							<GlobalItemsStyle />
 							<Header />
 							<Head>
 								<title>Smoelt | {item.title}</title>

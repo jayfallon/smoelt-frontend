@@ -7,6 +7,7 @@ const Meta = () => (
 		<meta charSet="utf-8" />
 		<link rel="shortcut icon" href="/static/favicon.png" />
 		<link rel="icon" href="/static/favicon.png" />
+		<link rel="stylesheet" type="text/css" href="/static/globalStyles.css" />
 		<link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
 		<title>SMOELT &amp; CO.</title>
 	</Head>

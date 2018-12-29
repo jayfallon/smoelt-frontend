@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 import Meta from "../Meta/Meta";
-import GlobalPageStyle from "../styles/Global/GlobalPageStyle";
 
 const theme = {
 	smoeltBlack: "hsla(0, 0%, 7%, 1)",
@@ -20,7 +19,6 @@ class Page extends Component {
 		return (
 			<ThemeProvider theme={theme}>
 				<>
-					<GlobalPageStyle />
 					<Meta />
 					{this.props.children}
 				</>
