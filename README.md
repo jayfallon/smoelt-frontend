@@ -46,7 +46,7 @@ This should take no more than a moment and as 12/29/18, no vulnerabilities were 
 
 #### Run
 
-Once installed all of the node modules, you'll be able to run the server in a dev environment using the following command:
+Once all of the node modules are installed, you'll be able to run the server in a dev environment using the following command:
 
 `npm run dev`
 
