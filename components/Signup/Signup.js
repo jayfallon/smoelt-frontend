@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "next/link";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "../styles/Form";
@@ -85,6 +86,12 @@ export default class Signup extends Component {
 									</div>
 									<div className="smoelt_form--group form-submit">
 										<SubmitButton type="submit">Sign Up</SubmitButton>
+									</div>
+									<div className="smoelt_form--group form-gate">
+										<span>Already have an account?</span>{" "}
+										<Link href="/signin">
+											<a>Sign In</a>
+										</Link>
 									</div>
 								</fieldset>
 							</LoginForm>

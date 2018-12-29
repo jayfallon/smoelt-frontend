@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "next/link";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import { InnerLoginPage, LoginForm } from "../styles/InnerLogin";
@@ -56,6 +57,11 @@ class RequestReset extends Component {
 
 								<div className="smoelt_form--group form-submit">
 									<SubmitButton type="submit">Request Reset</SubmitButton>
+								</div>
+								<div className="smoelt_form--group form-gate">
+									<Link href="/signin">
+										<a>Return to Sign In</a>
+									</Link>
 								</div>
 							</fieldset>
 						</LoginForm>
