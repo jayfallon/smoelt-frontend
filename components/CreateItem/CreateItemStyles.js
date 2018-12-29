@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const CreateItemWrapper = styled.div`
-	background-color: #f8f8f8;
+	background-color: ${props => props.theme.offWhite};
 	margin: ${props => props.theme.margin};
 	padding: ${props => props.theme.padding};
 `;
 
 const CreateItemStyles = styled.section`
-	background-color: #f8f8f8;
+	background-color: ${props => props.theme.offWhite};
 	margin: ${props => props.theme.margin};
 	padding: 8rem 0 16rem;
 	max-width: 80rem;
@@ -21,7 +21,7 @@ const CreateItemStyles = styled.section`
 	}
 	h3 {
 		padding-bottom: 2.5rem;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 2.8rem;
 		line-height: 1.71;
 		letter-spacing: 2.5px;
@@ -45,7 +45,7 @@ const CreateItemStyles = styled.section`
 
 	.smoelt_form--group label {
 		padding-bottom: 0.8rem;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.6rem;
 		line-height: 1.25;
 	}
@@ -54,7 +54,7 @@ const CreateItemStyles = styled.section`
 	.smoelt_form--group input[type="email"],
 	.smoelt_form--group input[type="password"],
 	.smoelt_form--group textarea {
-		background-color: #f8f8f8;
+		background-color: ${props => props.theme.offWhite};
 		padding: 1.2rem 1.4rem;
 		border: 0.1rem solid #cecece;
 		font-size: 1.6rem;
@@ -65,7 +65,7 @@ const CreateItemStyles = styled.section`
 		margin-right: 1rem;
 		width: 2rem;
 		height: 2rem;
-		border: 0.1rem solid #fff;
+		border: 0.1rem solid ${props => props.theme.smoeltWhite};
 	}
 
 	.smoelt_form--group span {
@@ -82,7 +82,7 @@ const CreateItemStyles = styled.section`
 
 	.smoelt_form--group.form-gate {
 		padding-bottom: 10rem;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.7rem;
 		display: flex;
 		flex-direction: row;
@@ -99,7 +99,7 @@ const CreateItemStyles = styled.section`
 	}
 
 	.smoelt_form--group.password-forgot {
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.6rem;
 	}
 

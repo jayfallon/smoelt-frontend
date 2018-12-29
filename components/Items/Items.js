@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Item from "../Item/Item";
 import Pagination from "../Pagination/Pagination";
 import DashboardStyles from "../styles/DashboardStyles";
 import DashboardDisclaimer from "../Disclaimer/DashboardDisclaimer";
+import GlobalPageStyle from "../styles/Global/GlobalPageStyle";
 
 import { ItemsStyles, ItemsInnerStyles } from "./ItemsStyles";
 import { perPage } from "../../config";
@@ -33,17 +34,11 @@ const ItemsList = styled.div`
 	grid-template-columns: repeat(auto-fill, minmax(36.4rem, 1fr));
 `;
 
-const GlobalItemsStyle = createGlobalStyle`
-    body {
-        background-color: ${props => props.theme.smoeltBlack};
-    }
-`;
-
 export default class Items extends Component {
 	render() {
 		return (
 			<div>
-				<GlobalItemsStyle />
+				<GlobalPageStyle />
 				<DashboardStyles />
 				<Header />
 				<main>

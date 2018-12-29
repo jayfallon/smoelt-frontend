@@ -4,6 +4,13 @@ import gql from "graphql-tag";
 import Table from "../styles/Table";
 import SickButton from "../styles/SickButton";
 import PropTypes from "prop-types";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalItemsStyle = createGlobalStyle`
+    body {
+        background-color: ${props => props.theme.smoeltBlack};
+    }
+`;
 
 const possiblePermissions = ["ADMIN", "USER", "ITEMCREATE", "ITEMUPDATE", "ITEMDELETE", "PERMISSIONUPDATE"];
 
@@ -36,6 +43,7 @@ const Permissions = props => (
 				<div>
 					<Error error={error} />
 					<div>
+						<GlobalItemsStyle />
 						<h2>Manage Permissions</h2>
 						<Table>
 							<thead>

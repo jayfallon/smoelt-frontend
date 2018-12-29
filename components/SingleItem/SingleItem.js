@@ -15,7 +15,7 @@ const GlobalItemsStyle = createGlobalStyle`
 `;
 
 const SingleItemStyles = styled.div`
-	background-color: #f8f8f8;
+	background-color: ${props => props.theme.offWhite};
 	max-width: 1200px;
 	margin: 2rem auto;
 	display: grid;
@@ -43,7 +43,7 @@ const SingleItemStyles = styled.div`
 		align-items: center;
 		h2 {
 			margin-bottom: 3rem;
-			font-family: GothamBold, sans-serif;
+			font-family: ${props => props.theme.fontBold};
 			font-size: 5.6rem;
 			/* text-align: center; */
 		}

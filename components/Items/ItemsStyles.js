@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const ItemsStyles = styled.section`
-	background-color: #f8f8f8;
-	color: #242424;
+	background-color: ${props => props.theme.offWhite};
+	color: ${props => props.theme.darkGray};
 `;
 
 const ItemsInnerStyles = styled.div`
@@ -12,7 +12,7 @@ const ItemsInnerStyles = styled.div`
 
 	.workflow_dashboard--awards-giveaway {
 		background-color: #fff;
-		color: #242424;
+		color: ${props => props.theme.darkGray};
 		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
 		display: grid;
 		grid-template-columns: 1fr;
@@ -29,7 +29,7 @@ const ItemsInnerStyles = styled.div`
 	}
 
 	.workflow_dashboard--grid-title h3 {
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 2.4rem;
 		line-height: 1.08;
 		letter-spacing: 0.5rem;

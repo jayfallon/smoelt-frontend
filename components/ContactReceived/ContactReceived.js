@@ -8,8 +8,8 @@ const GlobalContactStyle = createGlobalStyle`
         background-image: url(/static/images/andre-benz-230282-unsplash.png);
         background-repeat: no-repeat;
         background-position: center top -200px;
-        background-color: ${props => props.theme.boseBlack};
-        color: ${props => props.theme.boseRed};
+        background-color: ${props => props.theme.smoeltBlack};
+        color: ${props => props.theme.smoeltRed};
         height: 100vh;
     }
 `;

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const NavStyles = styled.div`
-	background-color: #242424;
+	background-color: ${props => props.theme.darkGray};
 	a {
-		color: #f8f8f8;
+		color: ${props => props.theme.offWhite};
 		text-decoration: none;
 	}
 
@@ -42,9 +42,9 @@ const NavStyles = styled.div`
 
 	ul.smoelt_dashboard--logo h3 {
 		padding-left: 2.65rem;
-		border-left: 0.2rem solid #f8f8f8;
-		color: #f8f8f8;
-		font-family: GothamBold, sans-serif;
+		border-left: 0.2rem solid ${props => props.theme.offWhite};
+		color: ${props => props.theme.offWhite};
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.8rem;
 		letter-spacing: 0.23rem;
 		text-transform: uppercase;
@@ -58,7 +58,7 @@ const NavStyles = styled.div`
 	}
 
 	ul.smoelt_dashboard--menu a {
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.2rem;
 		text-transform: uppercase;
 	}
@@ -70,7 +70,7 @@ const Logo = styled.h1`
 	align-items: center;
 
 	a {
-		background-image: url(/static/images/smoelt-logo-dash.png);
+		background-image: ${props => props.theme.smoeltLogoDash};
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 8rem 8rem;
@@ -84,24 +84,24 @@ const Logo = styled.h1`
 `;
 
 const CreateButton = styled.button`
-	background-color: #f8f8f8;
+	background-color: ${props => props.theme.offWhite};
 	padding: 1.15rem 2.65rem;
 	min-width: 12rem;
 	border: 0;
 	border-radius: 2.5rem;
-	color: #242424;
-	font-family: GothamBold, sans-serif;
+	color: ${props => props.theme.darkGray};
+	font-family: ${props => props.theme.fontBold};
 	font-size: 1.2rem;
 	letter-spacing: 0.15rem;
 	text-transform: uppercase;
 	cursor: pointer;
 	&:hover {
 		background-color: ${props => props.theme.livingCoral};
-		color: #f8f8f8;
+		color: ${props => props.theme.offWhite};
 	}
 	&:active {
-		background-color: #c65a52;
-		color: #f8f8f8;
+		background-color: ${props => props.theme.livingCoral};
+		color: ${props => props.theme.offWhite};
 	}
 `;
 
