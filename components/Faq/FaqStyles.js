@@ -12,7 +12,7 @@ const FaqStyles = styled.section`
 
 	h3 {
 		margin-bottom: 6rem;
-		color: #000000;
+		color: ${props => props.theme.smoeltBlack};
 		font-family: GothamBold;
 		font-size: 2.8rem;
 		line-height: 1.71;
@@ -29,7 +29,7 @@ const FaqStyles = styled.section`
 		margin-bottom: 3.2rem;
 		background-color: ${props => props.theme.smoeltWhite};
 		padding: 1.5rem 7rem 1.5rem 2.5rem;
-		color: #181818;
+		color: ${props => props.theme.smoeltBlack};
 		font-family: GothamBold;
 		font-size: 1.6rem;
 		letter-spacing: -0.3px;
@@ -51,7 +51,7 @@ const FaqStyles = styled.section`
 		background-position: right 2rem center;
 		background-color: ${props => props.theme.smoeltWhite};
 		padding: 1.5rem 7rem 1.5rem 2.5rem;
-		color: #181818;
+		color: ${props => props.theme.smoeltBlack};
 		font-family: GothamBold;
 		font-size: 1.6rem;
 		line-height: 1.43;
@@ -85,11 +85,7 @@ const FaqStyles = styled.section`
 	}
 
 	.faq_question article {
-<<<<<<< HEAD
-		background: ${props => props.theme.smoeltWhite}fff;
-=======
 		background: ${props => props.theme.smoeltWhite};
->>>>>>> master
 		margin: -1px 0 0;
 		overflow: hidden;
 		height: 0px;

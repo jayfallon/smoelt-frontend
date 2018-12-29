@@ -6,7 +6,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Error from "../ErrorMessage/ErrorMessage";
-import GlobalPageStyles from "../styles/Global/GlobalPageStyle";
+import GlobalPageStyle from "../styles/Global/GlobalPageStyle";
 
 const SingleItemStyles = styled.div`
 	background-color: ${props => props.theme.offWhite};
@@ -75,7 +75,7 @@ export default class SingleItem extends Component {
 					const item = data.item;
 					return (
 						<>
-							<GlobalPageStyles />
+							<GlobalPageStyle />
 							<Header />
 							<Head>
 								<title>Smoelt | {item.title}</title>

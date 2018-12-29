@@ -44,12 +44,12 @@ const LoginForm = styled.form`
 	.smoelt_form--group textarea {
 		background-color: ${props => props.theme.offWhite};
 		padding: 1.2rem 1.4rem;
-		border: 0.1rem solid #e6e6e6;
+		border: 0.1rem solid ${props => props.theme.lightGray};
 		font-size: 1.6rem;
 	}
 
 	.smoelt_form--group input[type="checkbox"] {
-		background-color: #181818;
+		background-color: ${props => props.theme.smoeltBlack};
 		margin-right: 1rem;
 		width: 2rem;
 		height: 2rem;
