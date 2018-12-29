@@ -6,13 +6,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Error from "../ErrorMessage/ErrorMessage";
-
-const GlobalItemsStyle = createGlobalStyle`
-    body {
-		background-image: url();
-        background-color: ${props => props.theme.smoeltBlack};
-    }
-`;
+import GlobalPageStyles from "../styles/Global/GlobalPageStyle";
 
 const SingleItemStyles = styled.div`
 	background-color: ${props => props.theme.offWhite};
@@ -28,8 +22,7 @@ const SingleItemStyles = styled.div`
 	}
 	img {
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		height: auto;
 		grid-area: 1/1/4/4;
 	}
 	.details {
@@ -82,6 +75,7 @@ export default class SingleItem extends Component {
 					const item = data.item;
 					return (
 						<>
+							<GlobalPageStyles />
 							<Header />
 							<Head>
 								<title>Smoelt | {item.title}</title>

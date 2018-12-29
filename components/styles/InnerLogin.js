@@ -53,7 +53,7 @@ const LoginForm = styled.form`
 		margin-right: 1rem;
 		width: 2rem;
 		height: 2rem;
-		border: 0.1rem solid #fff;
+		border: 0.1rem solid ${props => props.theme.smoeltWhite};
 	}
 
 	.smoelt_form--group.form-submit {

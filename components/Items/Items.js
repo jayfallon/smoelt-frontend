@@ -9,7 +9,6 @@ import Pagination from "../Pagination/Pagination";
 import DashboardStyles from "../styles/DashboardStyles";
 import DashboardDisclaimer from "../Disclaimer/DashboardDisclaimer";
 import GlobalPageStyle from "../styles/Global/GlobalPageStyle";
-
 import { ItemsStyles, ItemsInnerStyles } from "./ItemsStyles";
 import { perPage } from "../../config";
 
