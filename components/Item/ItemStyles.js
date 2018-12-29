@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Item = styled.div`
 	background-color: #fff;
 	height: 41.6rem;
-	color: #242424;
+	color: ${props => props.theme.darkGray};
 	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
 	box-shadow: ${props => props.theme.bs};
 	position: relative;

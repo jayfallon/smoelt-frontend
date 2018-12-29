@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 const ContactHeading = styled.header`
-	color: #f8f8f8;
+	color: ${props => props.theme.offWhite};
 	h1 {
 		margin-top: 2rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		a {
-			background-image: url(/static/images/smoelt-logo.png);
+			background-image: ${props => props.theme.smoeltLogo};
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 44rem 8.6rem;
@@ -28,7 +28,7 @@ const ContactHeading = styled.header`
 	h2 {
 		margin: 3rem auto 3.2rem;
 		max-width: 44.8rem;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 4.4rem;
 		line-height: 1.05;
 		letter-spacing: -0.05rem;

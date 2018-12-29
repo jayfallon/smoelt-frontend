@@ -33,7 +33,7 @@ const LoginForm = styled.form`
 
 	.smoelt_form--group label {
 		padding-bottom: 0.8rem;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.6rem;
 		line-height: 1.25;
 	}
@@ -42,7 +42,7 @@ const LoginForm = styled.form`
 	.smoelt_form--group input[type="email"],
 	.smoelt_form--group input[type="password"],
 	.smoelt_form--group textarea {
-		background-color: #f8f8f8;
+		background-color: ${props => props.theme.offWhite};
 		padding: 1.2rem 1.4rem;
 		border: 0.1rem solid #e6e6e6;
 		font-size: 1.6rem;
@@ -65,7 +65,7 @@ const LoginForm = styled.form`
 
 	.smoelt_form--group.form-gate {
 		padding-bottom: 10rem;
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.7rem;
 		display: flex;
 		flex-direction: row;
@@ -82,7 +82,7 @@ const LoginForm = styled.form`
 	}
 
 	.smoelt_form--group.password-forgot {
-		font-family: GothamBold, sans-serif;
+		font-family: ${props => props.theme.fontBold};
 		font-size: 1.6rem;
 	}
 
