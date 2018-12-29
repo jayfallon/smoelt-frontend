@@ -61,7 +61,7 @@ const CreateItemStyles = styled.section`
 	}
 
 	.smoelt_form--group input[type="checkbox"] {
-		background-color: #181818;
+		background-color: ${props => props.theme.smoeltBlack};
 		margin-right: 1rem;
 		width: 2rem;
 		height: 2rem;

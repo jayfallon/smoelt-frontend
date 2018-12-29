@@ -9,7 +9,7 @@ const theme = {
 	darkGray: "hsla(0, 0%, 14%, 1)",
 	gray: "hsla(0, 0%, 23%, 1)",
 	medGray: "${props => props.theme.medGray}",
-	lightGray: "#hsla(0, 0%, 88%, 1)",
+	lightGray: "hsla(0, 0%, 88%, 1)",
 	smoeltWhite: "hsla(0, 100%, 100%, 1)",
 	offWhite: "hsla(0, 0%, 97%, 1)",
 	livingCoral: "hsla(4, 94%, 69%, 1)",

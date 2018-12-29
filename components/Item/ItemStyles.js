@@ -4,12 +4,7 @@ const Item = styled.div`
 	background-color: ${props => props.theme.smoeltWhite};
 	height: 41.6rem;
 	color: ${props => props.theme.darkGray};
-<<<<<<< HEAD
 	box-shadow: ${props => props.theme.boxShadow};
-=======
-	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
->>>>>>> master
-	box-shadow: ${props => props.theme.bs};
 	position: relative;
 	display: grid;
 	grid-template-columns: 5rem 1fr 5rem;
@@ -21,13 +16,14 @@ const Item = styled.div`
 		grid-area: 1/1/4/4;
 	}
 	.buttonList {
+		background-color: ${props => props.theme.lightGray};
 		grid-area: 4/1/5/4;
 		display: grid;
 		/* width: 100%; */
-		border-top: 1px solid #e6e6e6;
+		border-top: 1px solid ${props => props.theme.lightGray};
 		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 		grid-gap: 1px;
-		background: #e6e6e6;
+		background: ${props => props.theme.lightGray};
 		& > * {
 			background: white;
 			border: 0;
