@@ -17,7 +17,10 @@ const SubmitButton = styled.button`
 		color: ${props => props.theme.offWhite};
 	}
 	&:active {
+		<<<<<<<HEAD
 		background-color: ${props => props.theme.boseBlack};
+		=======background-color: ${props => props.theme.smoeltBlack};
+		>>>>>>>master
 		color: ${props => props.theme.offWhite};
 	}
 `;
@@ -38,7 +41,7 @@ const GiveAwayButton = styled.button`
 		color: ${props => props.theme.offWhite};
 	}
 	&:active {
-		background-color: ${props => props.theme.boseBlack};
+		background-color: ${props => props.theme.smoeltBlack};
 		color: ${props => props.theme.offWhite};
 	}
 `;

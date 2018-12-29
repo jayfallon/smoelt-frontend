@@ -85,7 +85,11 @@ const FaqStyles = styled.section`
 	}
 
 	.faq_question article {
+<<<<<<< HEAD
 		background: ${props => props.theme.smoeltWhite}fff;
+=======
+		background: ${props => props.theme.smoeltWhite};
+>>>>>>> master
 		margin: -1px 0 0;
 		overflow: hidden;
 		height: 0px;

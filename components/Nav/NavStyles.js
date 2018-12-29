@@ -70,7 +70,7 @@ const Logo = styled.h1`
 	align-items: center;
 
 	a {
-		background-image: url(/static/images/smoelt-logo-dash.png);
+		background-image: ${props => props.theme.smoeltLogoDash};
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 8rem 8rem;
@@ -100,7 +100,7 @@ const CreateButton = styled.button`
 		color: ${props => props.theme.offWhite};
 	}
 	&:active {
-		background-color: #c65a52;
+		background-color: ${props => props.theme.livingCoral};
 		color: ${props => props.theme.offWhite};
 	}
 `;

@@ -11,9 +11,15 @@ const ItemsInnerStyles = styled.div`
 	max-width: ${props => props.theme.maxWidth};
 
 	.workflow_dashboard--awards-giveaway {
+<<<<<<< HEAD
 		background-color: ${props => props.theme.smoeltWhite};
 		color: ${props => props.theme.darkGray};
 		box-shadow: ${props => props.theme.boxShadow};
+=======
+		background-color: #fff;
+		color: ${props => props.theme.darkGray};
+		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+>>>>>>> master
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 3.9rem 22.2rem 7.8rem 8.7rem;

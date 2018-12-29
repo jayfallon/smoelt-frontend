@@ -31,7 +31,7 @@ const PaginationStyles = styled.div`
 			text-decoration: none;
 		}
 		a[aria-disabled="true"] {
-			color: gray;
+			color: ${props => props.theme.gray};
 			pointer-events: none;
 		}
 	}

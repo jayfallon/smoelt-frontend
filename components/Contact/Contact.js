@@ -9,8 +9,6 @@ const GlobalContactStyle = createGlobalStyle`
         background-image: url(/static/images/andre-benz-230282-unsplash.png);
         background-repeat: no-repeat;
         background-position: center top -200px;
-        background-color: ${props => props.theme.boseBlack};
-        color: ${props => props.theme.boseRed};
         height: 100vh;
     }
 `;
@@ -32,7 +30,7 @@ const SubmitButton = styled.button`
 		color: ${props => props.theme.offWhite};
 	}
 	&:active {
-		background-color: ${props => props.theme.boseBlack};
+		background-color: ${props => props.theme.smoeltBlack};
 		color: ${props => props.theme.offWhite};
 	}
 `;
